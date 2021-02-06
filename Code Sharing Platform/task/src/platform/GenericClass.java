@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GenericClass {
     private String code;
+    private String date;
     //private String content;
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
@@ -13,9 +14,10 @@ public class GenericClass {
         // default constructor
     }
 
-    public GenericClass(String title, String code) {
+    public GenericClass(String title, String code, String date) {
         this.title = title;
         this.code = code;
+        this.date = date;
         //this.content = content;
     }
 
@@ -33,6 +35,14 @@ public class GenericClass {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 
     /*public String getContent() {
